@@ -1,0 +1,16 @@
+package.xml
+setup.cfg
+setup.py
+../../build/vslam_pkg/vslam_pkg.egg-info/PKG-INFO
+../../build/vslam_pkg/vslam_pkg.egg-info/SOURCES.txt
+../../build/vslam_pkg/vslam_pkg.egg-info/dependency_links.txt
+../../build/vslam_pkg/vslam_pkg.egg-info/entry_points.txt
+../../build/vslam_pkg/vslam_pkg.egg-info/requires.txt
+../../build/vslam_pkg/vslam_pkg.egg-info/top_level.txt
+../../build/vslam_pkg/vslam_pkg.egg-info/zip-safe
+resource/vslam_pkg
+test/test_copyright.py
+test/test_flake8.py
+test/test_pep257.py
+vslam_pkg/__init__.py
+vslam_pkg/sift_tracker.py

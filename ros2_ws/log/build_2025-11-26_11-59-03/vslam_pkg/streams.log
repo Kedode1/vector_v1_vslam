@@ -1,0 +1,37 @@
+[2.053s] Invoking command in '/home/mohamed-kassem/vector_v1_vslam/ros2_ws/src/vslam_pkg': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/mohamed-kassem/vector_v1_vslam/ros2_ws/build/vslam_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mohamed-kassem/vector_v1_vslam/ros2_ws/install/vslam_pkg/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/vslam_pkg build --build-base /home/mohamed-kassem/vector_v1_vslam/ros2_ws/build/vslam_pkg/build install --record /home/mohamed-kassem/vector_v1_vslam/ros2_ws/build/vslam_pkg/install.log --single-version-externally-managed install_data
+[2.496s] running egg_info
+[2.496s] creating ../../build/vslam_pkg/vslam_pkg.egg-info
+[2.529s] writing ../../build/vslam_pkg/vslam_pkg.egg-info/PKG-INFO
+[2.530s] writing dependency_links to ../../build/vslam_pkg/vslam_pkg.egg-info/dependency_links.txt
+[2.530s] writing entry points to ../../build/vslam_pkg/vslam_pkg.egg-info/entry_points.txt
+[2.530s] writing requirements to ../../build/vslam_pkg/vslam_pkg.egg-info/requires.txt
+[2.531s] writing top-level names to ../../build/vslam_pkg/vslam_pkg.egg-info/top_level.txt
+[2.531s] writing manifest file '../../build/vslam_pkg/vslam_pkg.egg-info/SOURCES.txt'
+[2.599s] reading manifest file '../../build/vslam_pkg/vslam_pkg.egg-info/SOURCES.txt'
+[2.600s] writing manifest file '../../build/vslam_pkg/vslam_pkg.egg-info/SOURCES.txt'
+[2.600s] running build
+[2.601s] running build_py
+[2.601s] creating /home/mohamed-kassem/vector_v1_vslam/ros2_ws/build/vslam_pkg/build
+[2.601s] creating /home/mohamed-kassem/vector_v1_vslam/ros2_ws/build/vslam_pkg/build/lib
+[2.601s] creating /home/mohamed-kassem/vector_v1_vslam/ros2_ws/build/vslam_pkg/build/lib/vslam_pkg
+[2.602s] copying vslam_pkg/sift_tracker.py -> /home/mohamed-kassem/vector_v1_vslam/ros2_ws/build/vslam_pkg/build/lib/vslam_pkg
+[2.602s] copying vslam_pkg/__init__.py -> /home/mohamed-kassem/vector_v1_vslam/ros2_ws/build/vslam_pkg/build/lib/vslam_pkg
+[2.602s] running install
+[2.610s] running install_lib
+[2.644s] creating /home/mohamed-kassem/vector_v1_vslam/ros2_ws/install/vslam_pkg/lib/python3.12/site-packages/vslam_pkg
+[2.644s] copying /home/mohamed-kassem/vector_v1_vslam/ros2_ws/build/vslam_pkg/build/lib/vslam_pkg/sift_tracker.py -> /home/mohamed-kassem/vector_v1_vslam/ros2_ws/install/vslam_pkg/lib/python3.12/site-packages/vslam_pkg
+[2.645s] copying /home/mohamed-kassem/vector_v1_vslam/ros2_ws/build/vslam_pkg/build/lib/vslam_pkg/__init__.py -> /home/mohamed-kassem/vector_v1_vslam/ros2_ws/install/vslam_pkg/lib/python3.12/site-packages/vslam_pkg
+[2.645s] byte-compiling /home/mohamed-kassem/vector_v1_vslam/ros2_ws/install/vslam_pkg/lib/python3.12/site-packages/vslam_pkg/sift_tracker.py to sift_tracker.cpython-312.pyc
+[2.648s] byte-compiling /home/mohamed-kassem/vector_v1_vslam/ros2_ws/install/vslam_pkg/lib/python3.12/site-packages/vslam_pkg/__init__.py to __init__.cpython-312.pyc
+[2.648s] running install_data
+[2.649s] creating /home/mohamed-kassem/vector_v1_vslam/ros2_ws/install/vslam_pkg/share/ament_index
+[2.649s] creating /home/mohamed-kassem/vector_v1_vslam/ros2_ws/install/vslam_pkg/share/ament_index/resource_index
+[2.649s] creating /home/mohamed-kassem/vector_v1_vslam/ros2_ws/install/vslam_pkg/share/ament_index/resource_index/packages
+[2.650s] copying resource/vslam_pkg -> /home/mohamed-kassem/vector_v1_vslam/ros2_ws/install/vslam_pkg/share/ament_index/resource_index/packages
+[2.650s] copying package.xml -> /home/mohamed-kassem/vector_v1_vslam/ros2_ws/install/vslam_pkg/share/vslam_pkg
+[2.650s] running install_egg_info
+[2.685s] Copying ../../build/vslam_pkg/vslam_pkg.egg-info to /home/mohamed-kassem/vector_v1_vslam/ros2_ws/install/vslam_pkg/lib/python3.12/site-packages/vslam_pkg-0.0.0-py3.12.egg-info
+[2.686s] running install_scripts
+[2.910s] Installing sift_tracker script to /home/mohamed-kassem/vector_v1_vslam/ros2_ws/install/vslam_pkg/lib/vslam_pkg
+[2.910s] writing list of installed files to '/home/mohamed-kassem/vector_v1_vslam/ros2_ws/build/vslam_pkg/install.log'
+[2.957s] Invoked command in '/home/mohamed-kassem/vector_v1_vslam/ros2_ws/src/vslam_pkg' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/mohamed-kassem/vector_v1_vslam/ros2_ws/build/vslam_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mohamed-kassem/vector_v1_vslam/ros2_ws/install/vslam_pkg/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/vslam_pkg build --build-base /home/mohamed-kassem/vector_v1_vslam/ros2_ws/build/vslam_pkg/build install --record /home/mohamed-kassem/vector_v1_vslam/ros2_ws/build/vslam_pkg/install.log --single-version-externally-managed install_data

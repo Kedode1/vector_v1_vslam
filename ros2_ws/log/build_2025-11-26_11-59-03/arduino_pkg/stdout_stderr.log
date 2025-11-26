@@ -1,0 +1,32 @@
+running egg_info
+creating ../../build/arduino_pkg/arduino_pkg.egg-info
+writing ../../build/arduino_pkg/arduino_pkg.egg-info/PKG-INFO
+writing dependency_links to ../../build/arduino_pkg/arduino_pkg.egg-info/dependency_links.txt
+writing requirements to ../../build/arduino_pkg/arduino_pkg.egg-info/requires.txt
+writing top-level names to ../../build/arduino_pkg/arduino_pkg.egg-info/top_level.txt
+writing manifest file '../../build/arduino_pkg/arduino_pkg.egg-info/SOURCES.txt'
+reading manifest file '../../build/arduino_pkg/arduino_pkg.egg-info/SOURCES.txt'
+writing manifest file '../../build/arduino_pkg/arduino_pkg.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/mohamed-kassem/vector_v1_vslam/ros2_ws/build/arduino_pkg/build
+creating /home/mohamed-kassem/vector_v1_vslam/ros2_ws/build/arduino_pkg/build/lib
+creating /home/mohamed-kassem/vector_v1_vslam/ros2_ws/build/arduino_pkg/build/lib/arduino_pkg
+copying arduino_pkg/__init__.py -> /home/mohamed-kassem/vector_v1_vslam/ros2_ws/build/arduino_pkg/build/lib/arduino_pkg
+running install
+running install_lib
+creating /home/mohamed-kassem/vector_v1_vslam/ros2_ws/install/arduino_pkg/lib/python3.12/site-packages/arduino_pkg
+copying /home/mohamed-kassem/vector_v1_vslam/ros2_ws/build/arduino_pkg/build/lib/arduino_pkg/__init__.py -> /home/mohamed-kassem/vector_v1_vslam/ros2_ws/install/arduino_pkg/lib/python3.12/site-packages/arduino_pkg
+byte-compiling /home/mohamed-kassem/vector_v1_vslam/ros2_ws/install/arduino_pkg/lib/python3.12/site-packages/arduino_pkg/__init__.py to __init__.cpython-312.pyc
+running install_data
+creating /home/mohamed-kassem/vector_v1_vslam/ros2_ws/install/arduino_pkg/share
+creating /home/mohamed-kassem/vector_v1_vslam/ros2_ws/install/arduino_pkg/share/ament_index
+creating /home/mohamed-kassem/vector_v1_vslam/ros2_ws/install/arduino_pkg/share/ament_index/resource_index
+creating /home/mohamed-kassem/vector_v1_vslam/ros2_ws/install/arduino_pkg/share/ament_index/resource_index/packages
+copying resource/arduino_pkg -> /home/mohamed-kassem/vector_v1_vslam/ros2_ws/install/arduino_pkg/share/ament_index/resource_index/packages
+creating /home/mohamed-kassem/vector_v1_vslam/ros2_ws/install/arduino_pkg/share/arduino_pkg
+copying package.xml -> /home/mohamed-kassem/vector_v1_vslam/ros2_ws/install/arduino_pkg/share/arduino_pkg
+running install_egg_info
+Copying ../../build/arduino_pkg/arduino_pkg.egg-info to /home/mohamed-kassem/vector_v1_vslam/ros2_ws/install/arduino_pkg/lib/python3.12/site-packages/arduino_pkg-0.0.0-py3.12.egg-info
+running install_scripts
+writing list of installed files to '/home/mohamed-kassem/vector_v1_vslam/ros2_ws/build/arduino_pkg/install.log'

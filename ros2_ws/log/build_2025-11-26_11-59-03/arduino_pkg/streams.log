@@ -1,0 +1,34 @@
+[1.543s] Invoking command in '/home/mohamed-kassem/vector_v1_vslam/ros2_ws/src/arduino_pkg': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/mohamed-kassem/vector_v1_vslam/ros2_ws/build/arduino_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mohamed-kassem/vector_v1_vslam/ros2_ws/install/arduino_pkg/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/arduino_pkg build --build-base /home/mohamed-kassem/vector_v1_vslam/ros2_ws/build/arduino_pkg/build install --record /home/mohamed-kassem/vector_v1_vslam/ros2_ws/build/arduino_pkg/install.log --single-version-externally-managed install_data
+[2.010s] running egg_info
+[2.011s] creating ../../build/arduino_pkg/arduino_pkg.egg-info
+[2.046s] writing ../../build/arduino_pkg/arduino_pkg.egg-info/PKG-INFO
+[2.046s] writing dependency_links to ../../build/arduino_pkg/arduino_pkg.egg-info/dependency_links.txt
+[2.047s] writing requirements to ../../build/arduino_pkg/arduino_pkg.egg-info/requires.txt
+[2.047s] writing top-level names to ../../build/arduino_pkg/arduino_pkg.egg-info/top_level.txt
+[2.047s] writing manifest file '../../build/arduino_pkg/arduino_pkg.egg-info/SOURCES.txt'
+[2.118s] reading manifest file '../../build/arduino_pkg/arduino_pkg.egg-info/SOURCES.txt'
+[2.119s] writing manifest file '../../build/arduino_pkg/arduino_pkg.egg-info/SOURCES.txt'
+[2.119s] running build
+[2.120s] running build_py
+[2.120s] creating /home/mohamed-kassem/vector_v1_vslam/ros2_ws/build/arduino_pkg/build
+[2.120s] creating /home/mohamed-kassem/vector_v1_vslam/ros2_ws/build/arduino_pkg/build/lib
+[2.121s] creating /home/mohamed-kassem/vector_v1_vslam/ros2_ws/build/arduino_pkg/build/lib/arduino_pkg
+[2.121s] copying arduino_pkg/__init__.py -> /home/mohamed-kassem/vector_v1_vslam/ros2_ws/build/arduino_pkg/build/lib/arduino_pkg
+[2.121s] running install
+[2.129s] running install_lib
+[2.165s] creating /home/mohamed-kassem/vector_v1_vslam/ros2_ws/install/arduino_pkg/lib/python3.12/site-packages/arduino_pkg
+[2.165s] copying /home/mohamed-kassem/vector_v1_vslam/ros2_ws/build/arduino_pkg/build/lib/arduino_pkg/__init__.py -> /home/mohamed-kassem/vector_v1_vslam/ros2_ws/install/arduino_pkg/lib/python3.12/site-packages/arduino_pkg
+[2.166s] byte-compiling /home/mohamed-kassem/vector_v1_vslam/ros2_ws/install/arduino_pkg/lib/python3.12/site-packages/arduino_pkg/__init__.py to __init__.cpython-312.pyc
+[2.166s] running install_data
+[2.167s] creating /home/mohamed-kassem/vector_v1_vslam/ros2_ws/install/arduino_pkg/share
+[2.167s] creating /home/mohamed-kassem/vector_v1_vslam/ros2_ws/install/arduino_pkg/share/ament_index
+[2.167s] creating /home/mohamed-kassem/vector_v1_vslam/ros2_ws/install/arduino_pkg/share/ament_index/resource_index
+[2.168s] creating /home/mohamed-kassem/vector_v1_vslam/ros2_ws/install/arduino_pkg/share/ament_index/resource_index/packages
+[2.168s] copying resource/arduino_pkg -> /home/mohamed-kassem/vector_v1_vslam/ros2_ws/install/arduino_pkg/share/ament_index/resource_index/packages
+[2.168s] creating /home/mohamed-kassem/vector_v1_vslam/ros2_ws/install/arduino_pkg/share/arduino_pkg
+[2.168s] copying package.xml -> /home/mohamed-kassem/vector_v1_vslam/ros2_ws/install/arduino_pkg/share/arduino_pkg
+[2.169s] running install_egg_info
+[2.204s] Copying ../../build/arduino_pkg/arduino_pkg.egg-info to /home/mohamed-kassem/vector_v1_vslam/ros2_ws/install/arduino_pkg/lib/python3.12/site-packages/arduino_pkg-0.0.0-py3.12.egg-info
+[2.206s] running install_scripts
+[2.439s] writing list of installed files to '/home/mohamed-kassem/vector_v1_vslam/ros2_ws/build/arduino_pkg/install.log'
+[2.489s] Invoked command in '/home/mohamed-kassem/vector_v1_vslam/ros2_ws/src/arduino_pkg' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/mohamed-kassem/vector_v1_vslam/ros2_ws/build/arduino_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mohamed-kassem/vector_v1_vslam/ros2_ws/install/arduino_pkg/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/arduino_pkg build --build-base /home/mohamed-kassem/vector_v1_vslam/ros2_ws/build/arduino_pkg/build install --record /home/mohamed-kassem/vector_v1_vslam/ros2_ws/build/arduino_pkg/install.log --single-version-externally-managed install_data

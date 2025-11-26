@@ -24,6 +24,7 @@ setup(
     },
     entry_points={
         'console_scripts': [
+            'sift_tracker = vslam_pkg.sift_tracker:main'
         ],
     },
 )
