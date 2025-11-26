@@ -22,7 +22,7 @@ const int dcIn2 = 7;
 // ---- WHEEL CONSTANTS ----
 const float wheelDiameterMM = 64.0;
 const float wheelCircumferenceMM = 3.14159 * wheelDiameterMM;  // ≈ 201.06 mm
-const int encoderPPR = 385;  // your encoder pulses per revolution
+const int encoderPPR = 44;  // your encoder pulses per revolution
 
 // ---- Distance ----
 double distance_mm = 0;   // total distance
