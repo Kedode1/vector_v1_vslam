@@ -215,9 +215,9 @@ class VO_Node(Node):
 
                 pos = self.T_global[:3, 3]
                 self.get_logger().info(
-                    f"[POSE] X={pos[0]*1000:.1f} mm  "
-                    f"Y={pos[1]*1000:.1f} mm  "
-                    f"Z={pos[2]*1000:.1f} mm"
+                    f"[POSE] X={pos[0]/1000:.1f} mm  "
+                    f"Y={pos[1]/1000:.1f} mm  "
+                    f"Z={pos[2]/1000:.1f} mm"
                 )
 
                 self.last_kf_id = self.frame_id

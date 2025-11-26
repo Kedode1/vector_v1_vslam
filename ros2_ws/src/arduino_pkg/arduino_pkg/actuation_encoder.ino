@@ -1,13 +1,9 @@
 //including servo library for steering servo
 #include <Servo.h>
+#include <String>
+
 
 Servo steering;
-
-//Identifying pins connected to the arduino board
-const int steeringPin = 11;
-const int dcEnablePin = 9;
-const int dcIn1 = 8;
-const int dcIn2 = 7;
 
 #define steeringPin 11
 
@@ -16,8 +12,8 @@ const int dcIn2 = 7;
 #define L298N_in2 7  // Dir DC Motor
 #define L298N_in1 8 // Dir DC Motor
 
-#define right_encoder_phaseA 3  // Interrupt 
-#define right_encoder_phaseB 5  
+#define right_encoder_phaseA 14  // Interrupt 
+#define right_encoder_phaseB 15  
 
 // ---- WHEEL CONSTANTS ----
 const float wheelDiameterMM = 64.0;
@@ -47,8 +43,6 @@ void setup() {
   digitalWrite(L298N_in2, LOW);
 
   Serial.begin(115200);
-  steering.attach(steeringPin);
-  steering.write(95);
 
   pinMode(right_encoder_phaseB, INPUT);
   attachInterrupt(digitalPinToInterrupt(right_encoder_phaseA), rightEncoderCallback, RISING);
@@ -65,19 +59,18 @@ void loop() {
 
   int motor_speed = 0;
   int servo_angle = 95;
-  // Convert pulses → distance (mm)
-  instantaneous_distance_mm = ( (int)right_encoder_counter / encoderPPR ) * wheelCircumferenceMM;
 
   // Accumulate total
   distance_mm += instantaneous_distance_mm;
+  instantaneous_distance_mm = 0.0;
 
   if(Serial.available() > 0){
     String command = Serial.readStringUntil('\n');
 
     int commaIndex = command.indexOf(',');
     if (commaIndex != -1){
-      String part1 = commaIndex.substring(0, commaIndex);   
-      String part2 = commaIndex.substring(commaIndex + 1);  
+      String part1 = command.substring(0, commaIndex);   
+      String part2 = command.substring(commaIndex + 1);  
     
       int colonIndex1 = part1.indexOf(':');
       if (colonIndex1 != -1) {
@@ -89,7 +82,8 @@ void loop() {
         servo_angle = part2.substring(colonIndex2 + 1).toInt();
       }
     }
-
+    
+    servo_angle = constrain(servo_angle, 0, 180);
     steering.write(servo_angle);
 
     int speed_analog = map(abs(motor_speed), 0, 10, 0, 255);
@@ -112,7 +106,7 @@ void loop() {
 
   String command_to_be_send_to_rpi = "Distance_mm:" + String(distance_mm) + ",instantaneous_distance_mm:" + String(instantaneous_distance_mm) +"\n";
   Serial.print(command_to_be_send_to_rpi);
-  delay(10)
+  delay(10);
 }
 
 void rightEncoderCallback()
@@ -125,4 +119,6 @@ void rightEncoderCallback()
   {
     right_encoder_counter--;
   }
+    // Convert pulses → distance (mm)
+  instantaneous_distance_mm = ( (int)right_encoder_counter / encoderPPR ) * wheelCircumferenceMM;
 }
