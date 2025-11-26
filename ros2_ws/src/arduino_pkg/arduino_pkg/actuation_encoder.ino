@@ -91,12 +91,6 @@ void loop() {
     }
 
     steering.write(servo_angle);
-    Serial.print("Steering Angle Set To: ");
-    Serial.println(angle);
-
-  
-    Serial.print("Speed Set To: ");
-    Serial.println(motor_speed);
 
     int speed_analog = map(abs(motor_speed), 0, 10, 0, 255);
     speed_analog = constrain(speed_analog, 0, 255);
