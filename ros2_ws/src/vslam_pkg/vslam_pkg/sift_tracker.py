@@ -116,7 +116,7 @@ class VO_Node(Node):
     # --------------------------------------------------
     def encoder_callback(self, msg):
         # Expecting msg.data[0] = distance since last frame (meters)
-        if len(msg.y) > 0:
+        if msg.y > 0:
             self.encoder_distance = msg.y
         else:
             self.encoder_distance = 0.0
