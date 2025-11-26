@@ -4,6 +4,7 @@ import numpy as np
 import cv2
 from sensor_msgs.msg import Image
 from std_msgs.msg import Float64MultiArray
+from turtlesim.msg import Pose
 
 # ============================================================
 # ROS IMAGE → CV2 (no CvBridge)
@@ -57,7 +58,7 @@ class VO_Node(Node):
         )
 
         self.encoder_sub = self.create_subscription(
-            Float64MultiArray,
+            Pose,
             '/encoder_readings',
             self.encoder_callback,
             10
@@ -115,8 +116,8 @@ class VO_Node(Node):
     # --------------------------------------------------
     def encoder_callback(self, msg):
         # Expecting msg.data[0] = distance since last frame (meters)
-        if len(msg.data) > 0:
-            self.encoder_distance = msg.data[0]
+        if len(msg.y) > 0:
+            self.encoder_distance = msg.y
         else:
             self.encoder_distance = 0.0
 
