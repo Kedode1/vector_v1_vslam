@@ -30,6 +30,7 @@ double instantaneous_distance_mm = 0;
 
 volatile long right_encoder_counter = 0;
 
+
 void setup() {
 
   // Set driver pin modes
@@ -46,6 +47,8 @@ void setup() {
   digitalWrite(L298N_in2, LOW);
 
   Serial.begin(115200);
+  steering.attach(steeringPin);
+  steering.write(95);
 
   pinMode(right_encoder_phaseB, INPUT);
   attachInterrupt(digitalPinToInterrupt(right_encoder_phaseA), rightEncoderCallback, RISING);
@@ -60,18 +63,64 @@ for dc -> "DC:<Direction>:<Val>" and for direction its whether BACKWARD, FORWARD
 
 void loop() {
 
+  int motor_speed = 0;
+  int servo_angle = 95;
   // Convert pulses → distance (mm)
   instantaneous_distance_mm = ( (int)right_encoder_counter / encoderPPR ) * wheelCircumferenceMM;
 
   // Accumulate total
   distance_mm += instantaneous_distance_mm;
 
+  if(Serial.available() > 0){
+    String command = Serial.readStringUntil('\n');
 
-  //-------------------------------------------------------------------------
-  //-------------------------ACTUATOR MOVEMENT LOGIC-------------------------
-  //-------------------------------------------------------------------------
- 
+    int commaIndex = command.indexOf(',');
+    if (commaIndex != -1){
+      String part1 = commaIndex.substring(0, commaIndex);   
+      String part2 = commaIndex.substring(commaIndex + 1);  
+    
+      int colonIndex1 = part1.indexOf(':');
+      if (colonIndex1 != -1) {
+        motor_speed = part1.substring(colonIndex1 + 1).toInt();
+      }
+
+      int colonIndex2 = part2.indexOf(':');
+      if (colonIndex2 != -1) {
+        servo_angle = part2.substring(colonIndex2 + 1).toInt();
+      }
+    }
+
+    steering.write(servo_angle);
+    Serial.print("Steering Angle Set To: ");
+    Serial.println(angle);
+
+  
+    Serial.print("Speed Set To: ");
+    Serial.println(motor_speed);
+
+    int speed_analog = map(abs(motor_speed), 0, 10, 0, 255);
+    speed_analog = constrain(speed_analog, 0, 255);
+
+    analogWrite(L298N_enA, speed_analog); 
+    if(motor_speed > 0){ 
+      digitalWrite(L298N_in1, HIGH);
+      digitalWrite(L298N_in2, LOW);
+    }
+    else if(motor_speed < 0){ 
+      digitalWrite(L298N_in1, LOW);
+      digitalWrite(L298N_in2, HIGH);
+    }
+    else{
+      digitalWrite(L298N_in1, LOW);
+      digitalWrite(L298N_in2, LOW);
+    }
+  }
+
+  String command_to_be_send_to_rpi = "Distance_mm:" + String(distance_mm) + ",instantaneous_distance_mm:" + String(instantaneous_distance_mm) +"\n";
+  Serial.print(command_to_be_send_to_rpi);
+  delay(10)
 }
+
 void rightEncoderCallback()
 {
   if(digitalRead(right_encoder_phaseB) == HIGH)
