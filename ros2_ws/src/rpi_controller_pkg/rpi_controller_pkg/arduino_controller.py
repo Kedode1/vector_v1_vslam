@@ -44,8 +44,8 @@ class ArduinoController(Node):
             line = self.ser.readline().decode('utf-8').rstrip()
             self.get_logger().info(f'Received from Arduino: {line}')
             command_separation = line.split(',')
-            self.distance_mm = int(command_separation[0].split(':')[1].strip())
-            self.instantaneous_distance_mm = int(command_separation[1].split(':')[1].strip())
+            self.distance_mm = float(command_separation[0].split(':')[1].strip())
+            self.instantaneous_distance_mm = float(command_separation[1].split(':')[1].strip())
             msg = Pose()
             msg.x = self.distance_mm
             msg.y = self.instantaneous_distance_mm
