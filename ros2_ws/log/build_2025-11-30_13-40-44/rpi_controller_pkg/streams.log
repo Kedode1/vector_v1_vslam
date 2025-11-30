@@ -1,0 +1,29 @@
+[1.378s] Invoking command in '/home/mohammed-sameh/hatem_version/ros2_ws/src/rpi_controller_pkg': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/mohammed-sameh/hatem_version/ros2_ws/build/rpi_controller_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mohammed-sameh/hatem_version/ros2_ws/install/rpi_controller_pkg/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/rpi_controller_pkg build --build-base /home/mohammed-sameh/hatem_version/ros2_ws/build/rpi_controller_pkg/build install --record /home/mohammed-sameh/hatem_version/ros2_ws/build/rpi_controller_pkg/install.log --single-version-externally-managed install_data
+[1.676s] running egg_info
+[1.692s] writing ../../build/rpi_controller_pkg/rpi_controller_pkg.egg-info/PKG-INFO
+[1.693s] writing dependency_links to ../../build/rpi_controller_pkg/rpi_controller_pkg.egg-info/dependency_links.txt
+[1.693s] writing entry points to ../../build/rpi_controller_pkg/rpi_controller_pkg.egg-info/entry_points.txt
+[1.693s] writing requirements to ../../build/rpi_controller_pkg/rpi_controller_pkg.egg-info/requires.txt
+[1.693s] writing top-level names to ../../build/rpi_controller_pkg/rpi_controller_pkg.egg-info/top_level.txt
+[1.724s] reading manifest file '../../build/rpi_controller_pkg/rpi_controller_pkg.egg-info/SOURCES.txt'
+[1.725s] writing manifest file '../../build/rpi_controller_pkg/rpi_controller_pkg.egg-info/SOURCES.txt'
+[1.726s] running build
+[1.726s] running build_py
+[1.726s] copying rpi_controller_pkg/pos_det.py -> /home/mohammed-sameh/hatem_version/ros2_ws/build/rpi_controller_pkg/build/lib/rpi_controller_pkg
+[1.726s] copying rpi_controller_pkg/arduino_controller.py -> /home/mohammed-sameh/hatem_version/ros2_ws/build/rpi_controller_pkg/build/lib/rpi_controller_pkg
+[1.726s] running install
+[1.731s] running install_lib
+[1.745s] copying /home/mohammed-sameh/hatem_version/ros2_ws/build/rpi_controller_pkg/build/lib/rpi_controller_pkg/pos_det.py -> /home/mohammed-sameh/hatem_version/ros2_ws/install/rpi_controller_pkg/lib/python3.12/site-packages/rpi_controller_pkg
+[1.745s] copying /home/mohammed-sameh/hatem_version/ros2_ws/build/rpi_controller_pkg/build/lib/rpi_controller_pkg/arduino_controller.py -> /home/mohammed-sameh/hatem_version/ros2_ws/install/rpi_controller_pkg/lib/python3.12/site-packages/rpi_controller_pkg
+[1.746s] byte-compiling /home/mohammed-sameh/hatem_version/ros2_ws/install/rpi_controller_pkg/lib/python3.12/site-packages/rpi_controller_pkg/pos_det.py to pos_det.cpython-312.pyc
+[1.747s] byte-compiling /home/mohammed-sameh/hatem_version/ros2_ws/install/rpi_controller_pkg/lib/python3.12/site-packages/rpi_controller_pkg/arduino_controller.py to arduino_controller.cpython-312.pyc
+[1.747s] running install_data
+[1.747s] copying package.xml -> /home/mohammed-sameh/hatem_version/ros2_ws/install/rpi_controller_pkg/share/rpi_controller_pkg
+[1.748s] running install_egg_info
+[1.762s] removing '/home/mohammed-sameh/hatem_version/ros2_ws/install/rpi_controller_pkg/lib/python3.12/site-packages/rpi_controller_pkg-0.0.0-py3.12.egg-info' (and everything under it)
+[1.763s] Copying ../../build/rpi_controller_pkg/rpi_controller_pkg.egg-info to /home/mohammed-sameh/hatem_version/ros2_ws/install/rpi_controller_pkg/lib/python3.12/site-packages/rpi_controller_pkg-0.0.0-py3.12.egg-info
+[1.763s] running install_scripts
+[1.851s] Installing arduino_controller script to /home/mohammed-sameh/hatem_version/ros2_ws/install/rpi_controller_pkg/lib/rpi_controller_pkg
+[1.852s] Installing pos script to /home/mohammed-sameh/hatem_version/ros2_ws/install/rpi_controller_pkg/lib/rpi_controller_pkg
+[1.852s] writing list of installed files to '/home/mohammed-sameh/hatem_version/ros2_ws/build/rpi_controller_pkg/install.log'
+[1.874s] Invoked command in '/home/mohammed-sameh/hatem_version/ros2_ws/src/rpi_controller_pkg' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/mohammed-sameh/hatem_version/ros2_ws/build/rpi_controller_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mohammed-sameh/hatem_version/ros2_ws/install/rpi_controller_pkg/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/rpi_controller_pkg build --build-base /home/mohammed-sameh/hatem_version/ros2_ws/build/rpi_controller_pkg/build install --record /home/mohammed-sameh/hatem_version/ros2_ws/build/rpi_controller_pkg/install.log --single-version-externally-managed install_data

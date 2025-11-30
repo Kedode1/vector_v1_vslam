@@ -25,6 +25,7 @@ setup(
     entry_points={
         'console_scripts': [
             "arduino_controller = rpi_controller_pkg.arduino_controller:main",
+            "pos = rpi_controller_pkg.pos_det:main",
         ],
     },
 )
