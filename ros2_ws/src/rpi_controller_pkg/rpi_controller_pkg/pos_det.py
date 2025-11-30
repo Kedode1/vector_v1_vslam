@@ -68,6 +68,9 @@ class pos_calculation(Node):
         self.x += x_dot * dt
         self.y += y_dot * dt
 
+        self.get_logger().info(f'Position -> x: {self.x:.2f} mm, y: {self.y:.2f} mm')
+
+
 def main(args=None):
     rclpy.init(args=args)
     node = pos_calculation()
