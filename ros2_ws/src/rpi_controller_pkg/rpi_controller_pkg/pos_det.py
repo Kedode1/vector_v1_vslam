@@ -9,7 +9,7 @@ import math
 class pos_calculation(Node):
     def __init__(self):
         super().__init__('position_calculation')
-        self.angle_prev = 0.0
+        self.angle_prev = math.pi / 2  # Initial orientation facing "up"
         self.steering_angle_prev = 0.0
         self.wheel_radius_mm = 32.0  # Example wheel radius in mm
         self.omega = 0.0
@@ -62,8 +62,8 @@ class pos_calculation(Node):
 
     def timer_callback(self):
         dt = 0.01
-        x_dot = (self.v) * math.cos(self.angle_prev) - (self.v * self.steering_angle_prev * (1/ self.l)) * self.lh * math.sin(self.angle_prev)
-        y_dot = (self.v) * math.sin(self.angle_prev) + (self.v * self.steering_angle_prev * (1/ self.l)) * self.lh * math.cos(self.angle_prev)
+        x_dot = (self.v) * math.cos(self.angle_prev) - (self.v * self.steering_angle_prev * (1/ self.l) * self.lh * math.sin(self.angle_prev))
+        y_dot = (self.v) * math.sin(self.angle_prev) + (self.v * self.steering_angle_prev * (1/ self.l) * self.lh * math.cos(self.angle_prev))
         
         self.x += x_dot * dt
         self.y += y_dot * dt

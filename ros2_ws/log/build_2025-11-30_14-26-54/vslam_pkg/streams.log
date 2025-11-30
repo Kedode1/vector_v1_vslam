@@ -1,0 +1,21 @@
+[1.389s] Invoking command in '/home/mohammed-sameh/hatem_version/ros2_ws/src/vslam_pkg': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/mohammed-sameh/hatem_version/ros2_ws/build/vslam_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mohammed-sameh/hatem_version/ros2_ws/install/vslam_pkg/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/vslam_pkg build --build-base /home/mohammed-sameh/hatem_version/ros2_ws/build/vslam_pkg/build install --record /home/mohammed-sameh/hatem_version/ros2_ws/build/vslam_pkg/install.log --single-version-externally-managed install_data
+[1.683s] running egg_info
+[1.701s] writing ../../build/vslam_pkg/vslam_pkg.egg-info/PKG-INFO
+[1.701s] writing dependency_links to ../../build/vslam_pkg/vslam_pkg.egg-info/dependency_links.txt
+[1.701s] writing entry points to ../../build/vslam_pkg/vslam_pkg.egg-info/entry_points.txt
+[1.702s] writing requirements to ../../build/vslam_pkg/vslam_pkg.egg-info/requires.txt
+[1.702s] writing top-level names to ../../build/vslam_pkg/vslam_pkg.egg-info/top_level.txt
+[1.738s] reading manifest file '../../build/vslam_pkg/vslam_pkg.egg-info/SOURCES.txt'
+[1.739s] writing manifest file '../../build/vslam_pkg/vslam_pkg.egg-info/SOURCES.txt'
+[1.739s] running build
+[1.739s] running build_py
+[1.739s] running install
+[1.745s] running install_lib
+[1.764s] running install_data
+[1.764s] running install_egg_info
+[1.783s] removing '/home/mohammed-sameh/hatem_version/ros2_ws/install/vslam_pkg/lib/python3.12/site-packages/vslam_pkg-0.0.0-py3.12.egg-info' (and everything under it)
+[1.783s] Copying ../../build/vslam_pkg/vslam_pkg.egg-info to /home/mohammed-sameh/hatem_version/ros2_ws/install/vslam_pkg/lib/python3.12/site-packages/vslam_pkg-0.0.0-py3.12.egg-info
+[1.784s] running install_scripts
+[1.913s] Installing sift_tracker script to /home/mohammed-sameh/hatem_version/ros2_ws/install/vslam_pkg/lib/vslam_pkg
+[1.913s] writing list of installed files to '/home/mohammed-sameh/hatem_version/ros2_ws/build/vslam_pkg/install.log'
+[1.948s] Invoked command in '/home/mohammed-sameh/hatem_version/ros2_ws/src/vslam_pkg' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/mohammed-sameh/hatem_version/ros2_ws/build/vslam_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/mohammed-sameh/hatem_version/ros2_ws/install/vslam_pkg/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/vslam_pkg build --build-base /home/mohammed-sameh/hatem_version/ros2_ws/build/vslam_pkg/build install --record /home/mohammed-sameh/hatem_version/ros2_ws/build/vslam_pkg/install.log --single-version-externally-managed install_data
