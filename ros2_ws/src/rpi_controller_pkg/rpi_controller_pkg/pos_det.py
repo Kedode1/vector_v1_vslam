@@ -7,6 +7,7 @@ import math
 
 
 class pos_calculation(Node):
+    
     def __init__(self):
         super().__init__('position_calculation')
         self.angle_prev = math.pi / 2  # Initial orientation facing "up"
