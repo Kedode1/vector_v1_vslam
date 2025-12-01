@@ -8,7 +8,7 @@ from turtlesim.msg import Pose
 
 
 class ArduinoController(Node):
-    
+
     def __init__(self):
         super().__init__('arduino_controller')
         self.declare_parameter('serial_port', '/dev/ttyACM0')
@@ -28,6 +28,7 @@ class ArduinoController(Node):
         self.distance_mm = 0
 
     def callback(self, msg):
+
         linear_x = msg.linear.x  # Forward/Backward speed
         angular_z = msg.angular.z  # Steering angle
 
@@ -39,8 +40,10 @@ class ArduinoController(Node):
         command = f"M:{motor_speed},S:{steering_angle}\n"
         self.ser.write(command.encode('utf-8'))
         self.get_logger().info(f'Sent command: {command.strip()}')
+
     
     def timer_callback(self):
+
         if self.ser.in_waiting > 0:
             line = self.ser.readline().decode('utf-8').rstrip()
             self.get_logger().info(f'Received from Arduino: {line}')
@@ -54,6 +57,7 @@ class ArduinoController(Node):
             
 
     def destroy_node(self):
+        
         """Graceful shutdown"""
         self.ser.write(b'M:0,S:95\n')
         self.ser.close()

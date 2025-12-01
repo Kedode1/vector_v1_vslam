@@ -1,7 +1,7 @@
 //including servo library for steering servo
 #include <Servo.h>
 #include <String>
-
+#include <Arduino_LSM6DSOX.h>
 
 Servo steering;
 
@@ -26,6 +26,11 @@ double instantaneous_distance_mm = 0;
 
 volatile long right_encoder_counter = 0;
 
+float Ax, Ay, Az;
+float Gx, Gy, Gz;
+
+
+
 
 void setup() {
 
@@ -43,6 +48,21 @@ void setup() {
   digitalWrite(L298N_in2, LOW);
 
   Serial.begin(115200);
+  while(!Serial);
+  IMU.begin()
+
+  print("Accelerometer sample rate = ");
+
+  print(IMU.accelerationSampleRate());
+
+  print("Hz\n");
+
+  print("Gyroscope sample rate = ");  
+
+  print(IMU.gyroscopeSampleRate());
+
+  println("Hz\n");
+
 
   pinMode(right_encoder_phaseB, INPUT);
   attachInterrupt(digitalPinToInterrupt(right_encoder_phaseA), rightEncoderCallback, RISING);
@@ -59,6 +79,15 @@ void loop() {
 
   int motor_speed = 0;
   int servo_angle = 95;
+
+  if (IMU.accelerationAvailable()) {
+    IMU.readAcceleration(Ax, Ay, Az);
+  }
+
+
+  if (IMU.gyroscopeAvailable()) {
+    IMU.readGyroscope(Gx, Gy, Gz);
+  }
 
   // Accumulate total
   distance_mm += instantaneous_distance_mm;
