@@ -22,10 +22,19 @@ class ArduinoController(Node):
         time.sleep(2)  # Give Arduino time to reset
         self.subscription = self.create_subscription(Twist,'/bicycle_controller/cmd_vel',self.callback,10)
         self.encoder_pub = self.create_publisher(Pose,'/encoder_readings',10)
+        self.acc_pub = self.create_publisher(Pose,'/acc_readings',10)
+        self.gyro_pub = self.create_publisher(Pose,'/gyro_readings',10)
         self.timer = self.create_timer(0.01, self.timer_callback)
 
         self.instantaneous_distance_mm = 0
         self.distance_mm = 0
+
+        self.Ax = 0.0
+        self.Ay = 0.0
+        self.Az = 0.0
+        self.Gx = 0.0
+        self.Gy = 0.0
+        self.Gz = 0.0
 
     def callback(self, msg):
 
@@ -50,10 +59,32 @@ class ArduinoController(Node):
             command_separation = line.split(',')
             self.distance_mm = float(command_separation[0].split(':')[1].strip())
             self.instantaneous_distance_mm = float(command_separation[1].split(':')[1].strip())
+
+            self.Ax = float(command_separation[2].split(':')[1].strip())
+            self.Ay = float(command_separation[3].split(':')[1].strip())
+            self.Az = float(command_separation[4].split(':')[1].strip())
+            self.Gx = float(command_separation[5].split(':')[1].strip())
+            self.Gy = float(command_separation[6].split(':')[1].strip())
+            self.Gz = float(command_separation[7].split(':')[1].strip())
+
+
             msg = Pose()
             msg.x = self.distance_mm
             msg.y = self.instantaneous_distance_mm
             self.encoder_pub.publish(msg)
+
+            acc_msg = Pose()
+            acc_msg.x = self.Ax
+            acc_msg.y = self.Ay
+            acc_msg.z = self.Az
+            self.acc_pub.publish(acc_msg)
+
+            gyro_msg = Pose()
+            gyro_msg.x = self.Gx
+            gyro_msg.y = self.Gy
+            gyro_msg.z = self.Gz
+            self.gyro_pub.publish(gyro_msg)
+
             
 
     def destroy_node(self):
